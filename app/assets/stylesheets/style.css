@@ -130,6 +130,7 @@ a {
   border: 1px #ffa500 solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  background: #fff;
 }
 
 .form__btn:hover {
