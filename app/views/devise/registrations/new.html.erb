@@ -50,8 +50,8 @@
         </div>
 
         <div class="field">
-          <%= f.label :prefecture_id, "活動地域" %><br />
-          <%= f.text_field :prefecture_id, class: :form__text %>
+          <%= f.label :prefecture_id, "活動地域", class: :label__text %><br />
+          <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"input__form", id:"prefecture"}) %>
         </div>
 
         <div class="actions">
