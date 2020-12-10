@@ -17,15 +17,18 @@
           <div class = "nav__top">
             <%= link_to image_tag("logo.png", class: :logo_header), root_path %>
           </div>
-          <div class = "nav__bottom">
-            <%= link_to "LOG IN", root_path, class: :nav__btn %>
-            <%= link_to "SIGN UP", new_user_registration_path, class: :nav__btn %>
-          </div>
-          <!-- <div class = "nav__bottom">
-            <%= link_to "MY PAGE", root_path %>
-            <%= link_to "LOG OUT", root_path %>
-          </div>
-        </div> -->
+          <% if user_signed_in? %>
+            <div class = "nav__bottom">
+              <%= link_to "MY PAGE", root_path, class: :nav__btn %>
+              <%= link_to "LOG OUT", root_path, class: :nav__btn %>
+            </div>
+          <% else %>
+            <div class = "nav__bottom">
+              <%= link_to "LOG IN", root_path, class: :nav__btn %>
+              <%= link_to "SIGN UP", new_user_registration_path, class: :nav__btn %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </header>
     <%= yield %>
