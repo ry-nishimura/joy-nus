@@ -89,7 +89,7 @@ a {
 .form__wrapper{
   min-height: calc(100vh - 161px);
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .label__text {
@@ -116,7 +116,6 @@ a {
   justify-content: center;
   height: 36px;
   border-radius: 6px;
-  background: #fff;
   font-size: 20px;
 }
 
