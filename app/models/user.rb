@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
+
+  validates :nickname, presence: true
+  validates :birthday, presence: true
+  validates :favorite_sports, presence: true
+  validates :prefecture_id, numericality: { other_than: 1 }
 end
