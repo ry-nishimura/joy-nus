@@ -72,18 +72,6 @@ a {
   background: #ffa500;
 }
 
-.nav__logout{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
-  text-decoration: none;
-  user-select: none;
-}
-.nav__logout:hover{
-  opacity: 0.5;
-}
-
 /* フッター */
 
 .footer {
@@ -94,4 +82,66 @@ a {
 .logo_footer {
   width: 100px;
   margin: 0 auto;
+}
+
+/* フォーム周り */
+
+.form__wrapper {
+  
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.session__form__wrapper {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.label__text {
+  font-size: 20px;
+}
+
+.input__form {
+  width: 30%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.field {
+  margin: 10px 0;
+}
+
+.input_birth_wrap {
+  display: flex;
+  justify-content: center;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.form__btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #ffa500;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #ffa500 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  background: #fff;
+}
+
+.form__btn:hover {
+  color: #fff;
+  background: #ffa500;
+}
+
+.actions{
+  margin-bottom: 40px;
 }
