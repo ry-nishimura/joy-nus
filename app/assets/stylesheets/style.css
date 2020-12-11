@@ -86,8 +86,13 @@ a {
 
 /* フォーム周り */
 
-.form__wrapper{
-  min-height: calc(100vh - 161px);
+.form__wrapper {
+  
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.session__form__wrapper {
   text-align: center;
   background-color: #ffffff;
 }
@@ -107,7 +112,7 @@ a {
   resize: none;
 }
 
-.field{
+.field {
   margin: 10px 0;
 }
 
