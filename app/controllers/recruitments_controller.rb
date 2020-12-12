@@ -3,6 +3,7 @@ class RecruitmentsController < ApplicationController
   end
 
   def new
+    @recruitment = Recruitment.new
   end
 
   def create

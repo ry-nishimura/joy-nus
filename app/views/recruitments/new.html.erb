@@ -1,0 +1,47 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">新規助っ人募集</h2>
+      <%= form_with(model: @recruitment, local: true) do |f|%>
+        <div class="field">
+          <%= f.label :date, "日付" %><br />
+          <%= f.text_field :date %>
+        </div>
+
+        <div class="field">
+          <%= f.label :time, "時間" %><br />
+          <%= f.text_field :time, class: :form__text %>
+        </div>
+
+        <div class="field">
+          <%= f.label :team, "チーム名" %><br />
+          <%= f.text_field :team, class: :form__text %>
+        </div>
+
+        <div class="field">
+          <%= f.label :sport, "競技名" %><br />
+          <%= f.text_field :sport %>
+        </div>
+
+        <div class="field">
+          <%= f.label :place, "場所名" %><br />
+          <%= f.text_field :place %>
+        </div>
+
+        <div class="field">
+          <%= f.label :position,"ポジション" %><br />
+          <%= f.text_field :position %>
+        </div>
+
+        <div class="field">
+          <%= f.label :experience_id, "経験の有無" %><br />
+          <%= f.collection_select(:experience_id, Experience.all, :id, :name, {}, {class:"input__form", id:"experience-status"}) %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "保存する", class: :form__btn  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
