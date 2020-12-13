@@ -7,7 +7,12 @@ class RecruitmentsController < ApplicationController
   end
 
   def create
-    @recruitment = Recruitment.create(recruitment_params)
+    @recruitment = Recruitment.new(recruitment_params)
+    if @recruitment.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
