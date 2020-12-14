@@ -72,7 +72,7 @@ joy-nus
 | Column        | Type       | Options           |
 | ------------- | ---------- | ----------------- |
 | date          | date       | null: false       |
-| time          | string     | null: false       |
+| time          | time       | null: false       |
 | team          | string     | null: false       |
 | sport         | string     | null: false       |
 | place         | string     | null: false       |

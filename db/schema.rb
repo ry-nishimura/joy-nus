@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_150343) do
 
   create_table "recruitments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "date", null: false
-    t.string "time", null: false
+    t.time "time", null: false
     t.string "team", null: false
     t.string "sport", null: false
     t.string "place", null: false
