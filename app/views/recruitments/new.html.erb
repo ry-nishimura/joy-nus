@@ -15,7 +15,7 @@
         <% end %>
       
         <div class="field">
-          <%= f.label :date, "日付" %><br />
+          <%= f.label :date, "日付", class: :label__text %><br />
           <div class="input_birth_wrap">
             <%= raw sprintf(
                     f.date_select(
@@ -32,7 +32,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :time, "時間" %><br />
+          <%= f.label :time, "時間", class: :label__text %><br />
           <div class="input_birth_wrap">
             <%= raw sprintf(
                     f.time_select(
@@ -47,27 +47,27 @@
         </div>
 
         <div class="field">
-          <%= f.label :team, "チーム名" %><br />
+          <%= f.label :team, "チーム名", class: :label__text %><br />
           <%= f.text_field :team, class: :input__form %>
         </div>
 
         <div class="field">
-          <%= f.label :sport, "競技名" %><br />
+          <%= f.label :sport, "競技名", class: :label__text %><br />
           <%= f.text_field :sport, class: :input__form %>
         </div>
 
         <div class="field">
-          <%= f.label :place, "場所" %><br />
+          <%= f.label :place, "場所", class: :label__text %><br />
           <%= f.text_field :place, class: :input__form %>
         </div>
 
         <div class="field">
-          <%= f.label :position,"ポジション" %><br />
+          <%= f.label :position,"ポジション", class: :label__text %><br />
           <%= f.text_field :position, class: :input__form %>
         </div>
 
         <div class="field">
-          <%= f.label :experience_id, "経験の有無" %><br />
+          <%= f.label :experience_id, "経験の有無", class: :label__text %><br />
           <%= f.collection_select(:experience_id, Experience.all, :id, :name, {}, {class:"input__form", id:"experience-status"}) %>
         </div>
 
