@@ -4,7 +4,7 @@
       <h2 class="page-heading">新規助っ人募集</h2>
       <%= form_with(model: @recruitment, local: true) do |f|%>
 
-      <% if @recruitment.errors.any? %>
+        <% if @recruitment.errors.any? %>
           <div id="error_explanation" class="alert alert-danger">
             <ul>
               <% @recruitment.errors.full_messages.each do |message| %>
@@ -33,7 +33,17 @@
 
         <div class="field">
           <%= f.label :time, "時間" %><br />
-          <%= f.text_field :time, class: :input__form %>
+          <div class="input_birth_wrap">
+            <%= raw sprintf(
+                    f.time_select(
+                      :time,
+                      class:"select-birth",
+                      id:"recruitment-time",
+                      prompt:"--",
+                      minute_step: 10,
+                      time_separator: "%s"),
+                    "<p> 時 </p>") + "<p> 分〜 </p>" %>
+          </div>
         </div>
 
         <div class="field">
